@@ -237,7 +237,7 @@ function release(pointer) {
 
 		if (end_location[1] < start_location[1]) {
 			var slope = [end_location[0] - start_location[0], end_location[1] - start_location[1]];
-			var x_traj = -2300 * slope[0] / slope[1];
+			var x_traj = -800 * slope[0] / slope[1];
 			launch(x_traj);
 		}
 	}
@@ -245,7 +245,7 @@ function release(pointer) {
 
 function launch(x_traj) {
 	if (ball.launched === false) {
-		ball.body.setCircle(36);
+		ball.body.setCircle(24);
 		ball.body.setCollisionGroup(collisionGroup);
 		ball.launched = true;
 		game.physics.p2.gravity.y = 3000;
